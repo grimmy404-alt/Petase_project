@@ -103,8 +103,3 @@ Future work may include:
 
 This project is an independent educational and research-oriented bioinformatics study currently under active development.This project is being developed as a learning-oriented bioinformatics pipeline combining sequence analysis, Linux workflows, and machine learning methods.
 
-```text
-petase_project/
-├── data/
-...
-```
