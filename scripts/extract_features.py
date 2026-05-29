@@ -45,16 +45,12 @@ labels = data["labels"]
 print("Extracting features...")
 X = []
 for i, seq in enumerate(sequences):
-    if i % 50 == 0:
-        print(f"  {i}/{len(sequences)}")
+    
     features = extract_features(seq)
     X.append(features)
 
 X = np.array(X)
 y = np.array(labels)
-
-print(f"\nFeature matrix shape: {X.shape}")
-print(f"Labels shape: {y.shape}")
 
 # Save
 
