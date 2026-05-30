@@ -4,14 +4,14 @@
 
 **Goal:** ML-guided discovery of novel PET-degrading enzymes from marine metagenomes
 
-**Novel angle:** Integrating sequence-based ML + BLAST homology search to identify marine PETase candidates from ocean metagenomes — environments underexplored for plastic-degrading enzymes.
+Integrating sequence-based ML + BLAST homology search to identify marine PETase candidates from ocean metagenomes — environments underexplored for plastic-degrading enzymes.
 
 ---
 
 ## Environment Setup
 
 ### System
-- OS: Windows 11 + WSL2 (Ubuntu)
+- OS: Windows 10 + WSL2 (Ubuntu)
 - IDE: VS Code with Remote-WSL extension
 
 ### Tools & Packages
