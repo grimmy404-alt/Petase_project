@@ -1,0 +1,13 @@
+Catalytic triad alignment positions: Ser=233, Asp=282, His=332
+
+Candidate                   Ser(160)   Asp(206)   His(237)   Triad?
+-------------------------------------------------------------------
+A0A365H682                         S          D          H      YES
+A0A365H6Y8                         S          D          H      YES
+A0A0F9UIZ8                         S          D          H      YES
+A0A0F9X315                         S          D          H      YES
+A0A1E7LM55                         S          D          H      YES
+A0A386WI52                         S          D          H      YES
+A0A553PS56                         S          N          E       NO
+A0A679PDB4                         S          D          H      YES
+IsPETase_ref                       S          D          H      YES
