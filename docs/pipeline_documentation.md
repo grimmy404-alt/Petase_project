@@ -290,8 +290,6 @@ with open("models/petase_classifier.pkl", "wb") as f:
 
 Output: `models/petase_classifier.pkl`
 
-An HMMER profile was also built for the PETase family: `models/petase.hmm`
-
 ---
 
 ## Phase 3: Marine Metagenome Search and Candidate Prediction
