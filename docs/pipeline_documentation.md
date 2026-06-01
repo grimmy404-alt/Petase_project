@@ -26,7 +26,6 @@
 | NumPy | Numerical arrays | `pip install numpy` |
 | Scikit-learn | ML library | `pip install scikit-learn` |
 | BLAST+ | Sequence similarity search | `conda install -c bioconda blast` |
-| HMMER | Hidden Markov Models | `conda install -c bioconda hmmer` |
 | SeqKit | FASTA manipulation | `conda install -c bioconda seqkit` |
 | MAFFT | Multiple sequence alignment | `conda install -c bioconda mafft` |
 | PyMOL | Structure visualization and alignment | Separate install |
@@ -70,7 +69,6 @@ petase_project/
 │       └── all_marine.fasta                    # Combined marine sequences (21,128 total)
 ├── models/
 │   ├── petase_classifier.pkl                 # Trained Random Forest classifier
-│   └── petase.hmm                            # HMMER profile for PETase family
 ├── results/
 │   ├── blast_alpha_beta.tsv                  # Raw BLAST results — alpha/beta hydrolases
 │   ├── blast_hydrolases.tsv                  # Raw BLAST results — hydrolases
@@ -291,8 +289,6 @@ with open("models/petase_classifier.pkl", "wb") as f:
 | **Overall Accuracy** | **96.08%** | |
 
 Output: `models/petase_classifier.pkl`
-
-An HMMER profile was also built for the PETase family: `models/petase.hmm`
 
 ---
 
