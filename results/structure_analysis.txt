@@ -1,0 +1,11 @@
+Name                                  Length   Mean pLDDT     >90%     <50%
+---------------------------------------------------------------------------
+IsPETase_reference                       290        92.93      260       19
+candidate_01_A0A365H682                  288        93.92      251        0
+candidate_02_A0A365H6Y8                  290        93.58      242        3
+candidate_03_A0A0F9UIZ8                  305        92.24      223        0
+candidate_04_A0A0F9X315                  300        92.91      224        0
+candidate_05_A0A1E7LM55                  310        94.21      251        0
+candidate_06_A0A386WI52                  295        93.84      229        1
+candidate_07_A0A553PS56                  588         88.6      404       38
+candidate_08_A0A679PDB4                  284        91.92      204        3
