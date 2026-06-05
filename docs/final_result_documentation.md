@@ -68,6 +68,88 @@ Most candidates achieved mean pLDDT scores above 90, indicating highly reliable 
 
 ## Structural Comparison with IsPETase
 
+Structural superposition was performed in PyMOL using the predicted IsPETase structure as the reference model. The two highest-confidence candidates, A0A0F9UIZ8 and A0A0F9X315, were selected for detailed structural comparison because they combined:
+
+- Maximum machine learning confidence (1.00)
+- Complete catalytic triad conservation
+- High-confidence structural predictions
+- Marine metagenomic origin
+
+### Global Structural Similarity
+
+Both candidates aligned extremely well with the IsPETase reference structure.
+
+| Candidate | RMSD (Å) | Interpretation |
+|------------|-----------|---------------|
+| A0A0F9UIZ8 | 0.714 | Near-identical fold |
+| A0A0F9X315 | 0.715 | Near-identical fold |
+
+RMSD values below 1 Å indicate exceptional three-dimensional conservation. Structural overlays showed that the overall α/β-hydrolase architecture, central β-sheet, surrounding α-helices, and catalytic loop regions were highly conserved relative to IsPETase.
+
+### Figure 1. Structural Superposition of Top Candidates with IsPETase
+
+**Figure 1A.** Structural superposition of IsPETase (cyan) and candidate A0A0F9UIZ8 (magenta).
+
+**Figure 1B.** Structural superposition of IsPETase (cyan) and candidate A0A0F9X315 (magenta).
+
+The nearly complete overlap between structures visually confirms the low RMSD values obtained during alignment.
+
+---
+
+### Catalytic Triad Spatial Conservation
+
+Catalytic triad analysis identified the following active-site residues:
+
+| Protein | Catalytic Ser | Catalytic Asp | Catalytic His |
+|----------|--------------|--------------|--------------|
+| IsPETase | S160 | D206 | H237 |
+| A0A0F9UIZ8 | S174 | D218 | H250 |
+| A0A0F9X315 | S170 | D214 | H246 |
+
+Although the residue numbering differs due to sequence insertions and deletions, the catalytic residues occupy equivalent structural positions within the active site.
+
+### Figure 2. Catalytic Triad Superposition
+
+**Figure 2A.** Active-site overlay of IsPETase and A0A0F9UIZ8 showing conservation of catalytic Ser-Asp-His geometry.
+
+**Figure 2B.** Active-site overlay of IsPETase and A0A0F9X315 showing conservation of catalytic Ser-Asp-His geometry.
+
+The catalytic residues converge in nearly identical spatial arrangements, supporting preservation of the classical serine hydrolase catalytic mechanism.
+
+---
+
+### Negative Control: A0A553PS56
+
+Candidate A0A553PS56 was included as a negative structural control because catalytic triad analysis revealed non-canonical substitutions:
+
+| Position | IsPETase | A0A553PS56 |
+|----------|----------|------------|
+| Catalytic Ser | S160 | S206 |
+| Catalytic Asp | D206 | N244 |
+| Catalytic His | H237 | E288 |
+
+Structural alignment produced an RMSD of approximately **7.68 Å**, indicating substantial divergence from the PETase fold.
+
+### Figure 3. Structural Superposition of A0A553PS56 with IsPETase
+
+Structural overlay of IsPETase and A0A553PS56 demonstrates major deviations in overall fold architecture and active-site organization.
+
+Combined with the catalytic residue substitutions, these observations suggest that A0A553PS56 is unlikely to function as a classical PETase despite receiving a high machine learning confidence score.
+
+---
+
+### Summary
+
+The combined sequence and structural analyses identify A0A0F9UIZ8 and A0A0F9X315 as the strongest PETase-like candidates recovered from marine metagenomic datasets. Both proteins exhibit:
+
+- Complete catalytic triad conservation
+- High-confidence predicted structures
+- Near-identical global folds relative to IsPETase
+- Sub-angstrom RMSD values
+- Conserved active-site geometry
+
+These results provide strong computational evidence that both candidates belong to the PETase family and warrant experimental validation.
+
 Structural superposition was performed in PyMOL using experimentally characterized IsPETase as the reference structure.
 
 The two strongest candidates, A0A0F9UIZ8 and A0A0F9X315, were aligned against IsPETase and evaluated using Root Mean Square Deviation (RMSD).
@@ -111,6 +193,6 @@ By combining machine learning predictions, catalytic triad conservation, structu
 * 7 of 8 candidates retained the canonical Ser-Asp-His catalytic triad.
 * Predicted structures showed high confidence (mean pLDDT generally >90).
 * Two marine metagenomic proteins (A0A0F9UIZ8 and A0A0F9X315) exhibited near-identical structural folds to IsPETase.
-* Structural alignment produced RMSD values of approximately 0.71 Å, supporting strong evolutionary and functional similarity.
+* Structural alignment produced RMSD values of approximately 0.71 Å, supporting strong evolutionary and probable functional similarity.
 
 These results demonstrate that the pipeline successfully identified previously uncharacterized marine proteins with strong sequence and structural characteristics of known PET-degrading enzymes.
