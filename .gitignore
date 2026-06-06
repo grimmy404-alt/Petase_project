@@ -3,3 +3,9 @@ __pycache__/
 .ipynb_checkpoints/
 logs/*.log
 .DS_Store
+archive/
+data/external/
+*.pkl
+*.npy
+*.pdb
+*.cif
