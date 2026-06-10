@@ -15,7 +15,7 @@ Polyethylene terephthalate (PET) plastic enters the ocean at ~8 million tonnes/y
 - **580 / 672** marine candidates predicted as PETase-like
 - **8 high-confidence candidates** selected for structural validation
 - **7 / 8** candidates confirmed Ser–Asp–His catalytic triad by MAFFT alignment
-- Top 2 candidates (A0A0F9UIZ8, A0A0F9X315) achieve **RMSD 0.714–0.715 Å** vs IsPETase — near-identical folds
+- All 7 triad-positive candidates achieve **RMSD 0.585–0.753 Å** vs IsPETase — near-identical folds
 - 3 candidates reclassified from "lipase / alpha-beta hydrolase" → high-confidence PETase-like
 
 ---
@@ -111,7 +111,7 @@ seqkit grep -f results/all_candidate_ids.txt data/external/all_marine.fasta \
 - Structure prediction: ESMFold (candidates ≤400 aa), AlphaFold2 Server (candidate 07, 588 aa)
 - pLDDT assessment: all candidates mean pLDDT 88.6–94.2 (high confidence)
 - Catalytic triad: MAFFT alignment → mapped IsPETase Ser160/Asp206/His237 → 7/8 conserved
-- Structural superposition: PyMOL `align` command
+- Structural superposition: PyMOL `align` command vs IsPETase reference
 
 ---
 
@@ -119,14 +119,14 @@ seqkit grep -f results/all_candidate_ids.txt data/external/all_marine.fasta \
 
 | Candidate | Source | Annotation | ML Prob | Triad | RMSD vs IsPETase |
 |---|---|---|---|---|---|
-| A0A365H682 | *Actinomadura craniellae* | PET hydrolase | 1.00 | ✓ | — |
-| A0A365H6Y8 | *Actinomadura craniellae* | PET hydrolase | 1.00 | ✓ | — |
+| A0A365H682 | *Actinomadura craniellae* | PET hydrolase | 1.00 | ✓ | **0.657 Å** |
+| A0A365H6Y8 | *Actinomadura craniellae* | PET hydrolase | 1.00 | ✓ | **0.585 Å** |
 | A0A0F9UIZ8 | Marine sediment metagenome | PET hydrolase/cutinase-like | 1.00 | ✓ | **0.714 Å** |
 | A0A0F9X315 | Marine sediment metagenome | PET hydrolase/cutinase-like | 1.00 | ✓ | **0.715 Å** |
-| A0A1E7LM55 | *Streptomyces nanshensis* | Lipase ⚠️ | 0.99 | ✓ | — |
-| A0A386WI52 | *Micromonospora tulbaghiae* | Alpha/beta hydrolase ⚠️ | 0.99 | ✓ | — |
+| A0A1E7LM55 | *Streptomyces nanshensis* | Lipase ⚠️ | 0.99 | ✓ | **0.645 Å** |
+| A0A386WI52 | *Micromonospora tulbaghiae* | Alpha/beta hydrolase ⚠️ | 0.99 | ✓ | **0.585 Å** |
 | A0A553PS56 | *Tigriopus californicus* | Carboxylic ester hydrolase | 0.99 | ✗ | 7.68 Å (negative control) |
-| A0A679PDB4 | *Streptomyces* sp. SM14 | Alpha/beta hydrolase ⚠️ | 0.99 | ✓ | — |
+| A0A679PDB4 | *Streptomyces* sp. SM14 | Alpha/beta hydrolase ⚠️ | 0.99 | ✓ | **0.753 Å** |
 
 ⚠️ = annotation potentially incomplete; pipeline identifies as PETase-like
 
