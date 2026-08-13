@@ -1,4 +1,4 @@
-# ML-Guided Discovery of Novel PETase-Like Enzymes from Marine Metagenomes
+# ML-Guided Computational Prioritization and Structural Characterization of PETase-like Proteins from Marine-associated Sequence Datasets.
 
 A computational pipeline integrating BLAST homology screening, Random Forest machine learning, and structural bioinformatics to identify putative PET-degrading enzymes from marine metagenomic sequences.
 
