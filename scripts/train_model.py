@@ -21,7 +21,7 @@ print(f"Test set: {len(X_test)}")
 # Train model
 
 print("\nTraining Random Forest...")
-model = RandomForestClassifier(n_estimators=100, random_state=42)
+model = RandomForestClassifier(n_estimators=100, random_state=42' stratify=y)
 model.fit(X_train, y_train)
 
 # Evaluate
