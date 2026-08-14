@@ -20,54 +20,6 @@ Polyethylene terephthalate (PET) plastic enters the ocean at ~8 million tonnes/y
 
 ---
 
-## Repository Structure
-
-```
-petase_project/
-├── data/
-│   ├── known_petases.fasta          # 179 confirmed PETases (PANDA dataset, positives)
-│   ├── non_petases.fasta            # 74 non-PETase cutinases (UniProt, negatives)
-│   ├── dataset.pkl                  # Combined labeled dataset (253 sequences)
-│   ├── features.npy                 # Feature matrix (253 × 24)
-│   ├── labels.npy                   # Labels (1=PETase, 0=non-PETase)
-│   ├── marine_candidates.fasta      # 780 marine candidates post-BLAST
-│   ├── aligned_candidates.fasta     # MAFFT alignment (8 candidates + IsPETase)
-│   ├── alignment_input.fasta        # MAFFT input
-│   ├── top_candidates_final2.fasta  # 8 final candidates (UniProt sequences)
-│   └── external/
-│       ├── marine_alpha_beta_hydrolases.fasta  # 7,123 seqs
-│       ├── marine_hydrolases.fasta             # 13,871 seqs
-│       ├── marine_pet_hydrolases.fasta         # 134 seqs
-│       └── all_marine.fasta                    # Combined (21,128 seqs)
-├── models/
-│   └── petase_classifier.pkl        # Trained Random Forest model
-├── scripts/
-│   ├── fasta_parser.py              # FASTA parsing utilities (shared)
-│   ├── prepare_dataset.py           # Phase 1: combine FASTAs, label, pickle
-│   ├── extract_features.py          # Phase 2: extract 24 features per sequence
-│   ├── train_model.py               # Phase 2: train Random Forest, save model
-│   ├── predict_candidates.py        # Phase 3: predict on marine candidates
-│   ├── analyze_structures.py        # Phase 4: parse pLDDT from PDB/CIF files
-│   └── catalytic_triad.py           # Phase 4: check Ser/Asp/His conservation
-├── results/
-│   ├── blast_*.tsv                  # Raw BLAST output (3 datasets)
-│   ├── high_confidence_*.tsv        # Filtered BLAST hits (identity≥35%, e≤1e-10)
-│   ├── all_candidate_ids.txt        # 672 unique candidate IDs
-│   ├── predictions.txt              # ML scores for all 672 candidates (ranked)
-│   ├── top_candidates.txt           # 8 final candidate IDs
-│   ├── catalytic_triad_analysis.txt # Catalytic triad conservation results
-│   ├── structure_analysis.txt       # pLDDT scores per candidate
-│   ├── structures/                  # Predicted PDB/CIF files (ESMFold, AlphaFold2)
-│   └── figures/                     # PyMOL figures (superpositions, active sites)
-├── docs/
-│   ├── pipeline_documentation.md    # Full technical documentation
-│   └── final_result_documentation.md
-└── archive/
-    └── alphafold_raw/               # Raw ColabFold/AlphaFold Server outputs
-```
-
----
-
 ## Pipeline
 
 ### Phase 1 — Training Data
