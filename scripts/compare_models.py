@@ -149,9 +149,9 @@ plt.savefig(out / "metric_bars.png", dpi=200); plt.close()
 
 #  MCC distribution across all folds (shows whether differences are real)
 plt.figure(figsize=(7, 5))
-plt.boxplot([raw[n]["test_mcc"] for n in MODELS], labels=list(MODELS), showmeans=True)
+plt.boxplot([raw[n]["test_mcc"] for n in MODELS], showmeans=True)
 plt.ylabel("MCC per fold"); plt.title("MCC spread across CV folds")
-plt.xticks(rotation=20); plt.grid(axis="y", alpha=.3); plt.tight_layout()
+plt.xticks(range(1, len(MODELS) + 1), list(MODELS), rotation=20)
 plt.savefig(out / "mcc_boxplot.png", dpi=200); plt.close()
 
 #  Confusion matrices (out-of-fold, threshold 0.5)
